@@ -1,5 +1,7 @@
 extends Node
 
+var PlayerisAlive: bool
+
 var CurryDebrisDestroyed: bool
 var BallDebrisDestroyed: bool
 var RocketDebrisDestroyed: bool
