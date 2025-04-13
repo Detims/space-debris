@@ -15,7 +15,12 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	# Horizontal movement
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	# var velocity = Vector2(move_speed * move_direction, 0)
+=======
+	var velocity = Vector2(move_speed * move_direction, 0)
+	move_and_slide()
+>>>>>>> Stashed changes
 =======
 	var velocity = Vector2(move_speed * move_direction, 0)
 	move_and_slide()
@@ -32,7 +37,10 @@ func _physics_process(delta: float) -> void:
 	if not animated_sprite.is_playing():
 		animated_sprite.play(available_animations.pick_random())
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 	move_and_slide()
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
