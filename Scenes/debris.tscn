@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://v3psw6itj88f" path="res://assets/images/curry/curry4.png" id="9_3dvn3"]
 [ext_resource type="Texture2D" uid="uid://dlwonay4cxkn0" path="res://assets/images/lebron/lebron4.png" id="9_ak0sr"]
 [ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="18_g7ckx"]
-[ext_resource type="Script" uid="uid://dlg85hp28u2pf" path="res://Scripts/laser-hitbox.gd" id="19_ljumg"]
+[ext_resource type="Script" uid="uid://dlg85hp28u2pf" path="res://Scripts/debris-death.gd" id="19_ljumg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5flnq"]
 animations = [{
