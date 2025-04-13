@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxvuurwkqbq4r"]
 
-[ext_resource type="Script" path="res://assets/start.gd" id="1_ngumy"]
+[ext_resource type="Script" uid="uid://qjjap4vagbio" path="res://assets/start.gd" id="1_ngumy"]
 [ext_resource type="FontFile" uid="uid://dtriah10o82uu" path="res://Fonts/QuirkyRobot.ttf" id="2_ngumy"]
 [ext_resource type="Texture2D" uid="uid://cerf64gfm7s17" path="res://assets/Spaceships/notlebron.png" id="3_5ogh5"]
 
