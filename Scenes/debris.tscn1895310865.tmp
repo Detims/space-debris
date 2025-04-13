@@ -1,0 +1,115 @@
+[gd_scene load_steps=21 format=3 uid="uid://nhajptns1p3n"]
+
+[ext_resource type="Script" uid="uid://bmp0y5cdikbbj" path="res://debris.gd" id="1_fmr6n"]
+[ext_resource type="Texture2D" uid="uid://ctxjbd52dxy2i" path="res://assets/images/ball/ballballball.png" id="2_ekawh"]
+[ext_resource type="Texture2D" uid="uid://bg7w2extsf0yc" path="res://assets/images/lego/lego1x1.png" id="2_fmr6n"]
+[ext_resource type="Texture2D" uid="uid://dnhndehc1x1qw" path="res://assets/images/lego/lego1x1_2.png" id="3_ci55q"]
+[ext_resource type="Texture2D" uid="uid://cs0njasmuxjjy" path="res://assets/images/ball/ballballball2.png" id="3_ljumg"]
+[ext_resource type="Texture2D" uid="uid://cgehsbwxjv4xp" path="res://assets/images/ball/ballballball3.png" id="4_ac3jk"]
+[ext_resource type="Texture2D" uid="uid://c341xwmq84hir" path="res://assets/images/lego/lego1x1_3.png" id="4_rkecj"]
+[ext_resource type="Texture2D" uid="uid://dbqmmuquaaca4" path="res://assets/images/lego/lego1x1_4.png" id="5_0j72j"]
+[ext_resource type="Texture2D" uid="uid://c2jtyiolyveum" path="res://assets/images/ball/ballballball4.png" id="5_mscjf"]
+[ext_resource type="Texture2D" uid="uid://bqpe120xq2vrh" path="res://assets/images/lebron/lebron.png" id="6_0vqdh"]
+[ext_resource type="Texture2D" uid="uid://bb8qaib1kyytp" path="res://assets/images/curry/curry.png" id="6_ub82u"]
+[ext_resource type="Texture2D" uid="uid://bl7xvubnwyniq" path="res://assets/images/curry/curry2.png" id="7_lyc6x"]
+[ext_resource type="Texture2D" uid="uid://djag3kicdimpg" path="res://assets/images/lebron/lebron2.png" id="7_nfixs"]
+[ext_resource type="Texture2D" uid="uid://cvbikrfjh22t" path="res://assets/images/curry/curry3.png" id="8_on21c"]
+[ext_resource type="Texture2D" uid="uid://cv7t3w6axi4x3" path="res://assets/images/lebron/lebron3.png" id="8_wm1ih"]
+[ext_resource type="Texture2D" uid="uid://v3psw6itj88f" path="res://assets/images/curry/curry4.png" id="9_3dvn3"]
+[ext_resource type="Texture2D" uid="uid://dlwonay4cxkn0" path="res://assets/images/lebron/lebron4.png" id="9_ak0sr"]
+[ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="18_g7ckx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5flnq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ekawh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ljumg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ac3jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mscjf")
+}],
+"loop": true,
+"name": &"ball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ub82u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lyc6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_on21c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3dvn3")
+}],
+"loop": true,
+"name": &"curry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fmr6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ci55q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rkecj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0j72j")
+}],
+"loop": true,
+"name": &"stud",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0vqdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nfixs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wm1ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ak0sr")
+}],
+"loop": true,
+"name": &"thruster",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_g7ckx")
+}],
+"loop": true,
+"name": &"trash",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ekawh"]
+radius = 30.0
+
+[node name="Debris" type="CharacterBody2D"]
+script = ExtResource("1_fmr6n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(180.5, 180.5)
+scale = Vector2(0.278, 0.278)
+sprite_frames = SubResource("SpriteFrames_5flnq")
+animation = &"trash"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(179, 170)
+shape = SubResource("CircleShape2D_ekawh")
