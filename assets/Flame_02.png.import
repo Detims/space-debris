@@ -2,8 +2,13 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream:assets/Flame_02.png.import
 uid="uid://bvxny618cisyq"
 path="res://.godot/imported/Flame_02.png-b2702d46087c9fe30444cf051b01c03c.ctex"
+=======
+uid="uid://vcf84yljgqi7"
+path="res://.godot/imported/Flame_02.png-335992f6371dad6cc749dc783f3a6b33.ctex"
+>>>>>>> Stashed changes:Flame_02.png.import
 metadata={
 "vram_texture": false
 }
