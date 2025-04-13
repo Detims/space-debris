@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://30q1sqt7kqny" path="res://Scripts/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cerf64gfm7s17" path="res://assets/Spaceships/notlebron.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bqs6ikebs1h5e" path="res://assets/Spaceships/notlebron1.png" id="3_vgqql"]
-[ext_resource type="Script" uid="uid://iyxattqhruf5" path="res://Scenes/shooting.gd" id="4_vgqql"]
-[ext_resource type="PackedScene" uid="uid://whdovvsg6yx2" path="res://Scenes/laser.tscn" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://iyxattqhruf5" path="res://Scripts/shooting.gd" id="4_vgqql"]
+[ext_resource type="PackedScene" uid="uid://dev4uupykwxlg" path="res://Scenes/laser.tscn" id="5_fkybt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
 animations = [{
