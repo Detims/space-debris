@@ -36,7 +36,7 @@ func _ready():
 		Globals.TrashisDestroyed = true
 	if type == "battery":
 		Globals.BatteryisDestroyed = true
-	animated_sprite.play(available_animations.pick_random())
+	animated_sprite.play(type)
 	
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Laser"):

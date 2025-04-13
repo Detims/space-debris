@@ -3,7 +3,7 @@ extends Node2D
 @export var debris_scene: PackedScene
 @export var initial_spawn_delay: float = 2.0
 @export var min_spawn_delay: float = 0.2
-@export var spawn_acceleration: float = 0.01
+@export var spawn_acceleration: float = 0.1
 
 @onready var spawn_points := get_spawn_markers()
 
