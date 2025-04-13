@@ -19,6 +19,7 @@ func get_spawn_markers() -> Array[Marker2D]:
 	return markers
 
 func _ready():
+	Globals.PlayerisAlive = true
 	if spawn_points.is_empty():
 		push_error("No Marker2D nodes found under DebrisSpawnPoints!")
 
@@ -33,6 +34,7 @@ func _process(delta: float) -> void:
 
 func spawn_debris() -> void:
 	if debris_scene == null or spawn_points.is_empty():
+		print("unlucky")
 		return
 
 	var spawn_point = spawn_points.pick_random()

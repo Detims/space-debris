@@ -1,6 +1,5 @@
 [gd_scene load_steps=23 format=3 uid="uid://nhajptns1p3n"]
 
-[ext_resource type="Script" uid="uid://dlvvydql1qsaj" path="res://Scripts/debris.gd" id="1_fmr6n"]
 [ext_resource type="Texture2D" uid="uid://ctxjbd52dxy2i" path="res://assets/images/ball/ballballball.png" id="2_ekawh"]
 [ext_resource type="Texture2D" uid="uid://bg7w2extsf0yc" path="res://assets/images/lego/lego1x1.png" id="2_fmr6n"]
 [ext_resource type="Texture2D" uid="uid://dnhndehc1x1qw" path="res://assets/images/lego/lego1x1_2.png" id="3_ci55q"]
@@ -19,6 +18,42 @@
 [ext_resource type="Texture2D" uid="uid://dlwonay4cxkn0" path="res://assets/images/lebron/lebron4.png" id="9_ak0sr"]
 [ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="18_g7ckx"]
 [ext_resource type="Script" uid="uid://dlg85hp28u2pf" path="res://Scripts/debris-death.gd" id="19_ljumg"]
+
+[sub_resource type="GDScript" id="GDScript_ekawh"]
+script/source = "extends CharacterBody2D
+@export var move_speed: float = 50.0
+@export var move_direction: int = [1, -1].pick_random()  # 1 for right, -1 for left
+@export var move_down_amount: float = 3.0
+@export var boundary_left: float = 0
+@export var boundary_right: float = 1024
+
+@onready var animated_sprite = $AnimatedSprite2D
+
+var available_animations = [\"stud\", \"thruster\", \"trash\", \"curry\", \"ball\"]
+
+func _ready():
+	animated_sprite.play(available_animations.pick_random())
+	
+func _physics_process(delta: float) -> void:
+	# Horizontal movement
+	# var velocity = Vector2(move_speed * move_direction, 0)
+	
+	# Move manually instead of using velocity
+	position.x += move_speed * move_direction * delta
+	position.y += move_down_amount
+
+	# Reverse direction if reaching screen edge
+	if position.x <= boundary_left or position.x >= boundary_right:
+		move_direction *= -1
+	
+	if not animated_sprite.is_playing():
+		animated_sprite.play(available_animations.pick_random())
+	
+	if Globals.PlayerisAlive == false:
+		queue_free()
+	
+	move_and_slide()
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5flnq"]
 animations = [{
@@ -106,13 +141,13 @@ radius = 30.0
 radius = 30.0
 
 [node name="Debris" type="CharacterBody2D"]
-script = ExtResource("1_fmr6n")
+script = SubResource("GDScript_ekawh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -1)
 scale = Vector2(0.278, 0.278)
 sprite_frames = SubResource("SpriteFrames_5flnq")
-animation = &"stud"
+animation = &"trash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ekawh")

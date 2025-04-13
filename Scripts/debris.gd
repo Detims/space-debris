@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play(available_animations.pick_random())
 	
 	if Globals.PlayerisAlive == false:
+		print("died")
 		queue_free()
 	
 	move_and_slide()
