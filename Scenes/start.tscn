@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxvuurwkqbq4r"]
 
-[ext_resource type="Script" uid="uid://qjjap4vagbio" path="res://assets/start.gd" id="1_ngumy"]
+[ext_resource type="Script" uid="uid://qjjap4vagbio" path="res://Scripts/start.gd" id="1_ngumy"]
 [ext_resource type="FontFile" uid="uid://dtriah10o82uu" path="res://Fonts/QuirkyRobot.ttf" id="2_ngumy"]
-[ext_resource type="Texture2D" uid="uid://cerf64gfm7s17" path="res://assets/Spaceships/notlebron.png" id="3_5ogh5"]
+[ext_resource type="Texture2D" uid="uid://ctxjbd52dxy2i" path="res://assets/images/ball/ballballball.png" id="3_5ogh5"]
 
 [node name="Start" type="CanvasLayer"]
 script = ExtResource("1_ngumy")
@@ -53,6 +53,15 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[node name="Label" type="Label" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ngumy")
+theme_override_font_sizes/font_size = 50
+text = "Shoot the debris!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Enemy" type="TextureRect" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
 texture_filter = 1
 custom_minimum_size = Vector2(60, 60)
@@ -62,14 +71,32 @@ size_flags_vertical = 4
 texture = ExtResource("3_5ogh5")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
+[node name="Enemy2" type="TextureRect" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_ngumy")
-theme_override_font_sizes/font_size = 50
-text = "= 10 points"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_vertical = 4
+texture = ExtResource("3_5ogh5")
+expand_mode = 3
+
+[node name="Enemy3" type="TextureRect" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_5ogh5")
+expand_mode = 3
+
+[node name="Enemy4" type="TextureRect" parent="StartUI/Format for Title and Button/Format for Button/FormatForEnemies/Enemy Point Labels"]
+texture_filter = 1
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_5ogh5")
+expand_mode = 3
 
 [node name="start_button" type="Button" parent="StartUI/Format for Title and Button/Format for Button"]
 layout_mode = 2
