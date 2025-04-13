@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://nhajptns1p3n"]
+[gd_scene load_steps=30 format=3 uid="uid://nhajptns1p3n"]
 
+[ext_resource type="Texture2D" uid="uid://cqo3bq0bn123p" path="res://assets/images/trash/apple.png" id="1_3dvn3"]
 [ext_resource type="Script" uid="uid://dlvvydql1qsaj" path="res://Scripts/debris.gd" id="1_fmr6n"]
 [ext_resource type="Texture2D" uid="uid://ctxjbd52dxy2i" path="res://assets/images/ball/ballballball.png" id="2_ekawh"]
 [ext_resource type="Texture2D" uid="uid://bg7w2extsf0yc" path="res://assets/images/lego/lego1x1.png" id="2_fmr6n"]
@@ -10,18 +11,32 @@
 [ext_resource type="Texture2D" uid="uid://dbqmmuquaaca4" path="res://assets/images/lego/lego1x1_4.png" id="5_0j72j"]
 [ext_resource type="Texture2D" uid="uid://c2jtyiolyveum" path="res://assets/images/ball/ballballball4.png" id="5_mscjf"]
 [ext_resource type="Texture2D" uid="uid://bqpe120xq2vrh" path="res://assets/images/lebron/lebron.png" id="6_0vqdh"]
+[ext_resource type="Texture2D" uid="uid://cnyy383ov0sbd" path="res://assets/images/trash/banana.png" id="6_g7ckx"]
 [ext_resource type="Texture2D" uid="uid://bb8qaib1kyytp" path="res://assets/images/curry/curry.png" id="6_ub82u"]
+[ext_resource type="Texture2D" uid="uid://ctmvrylsgrqju" path="res://assets/images/trash/bat.png" id="7_2m7fh"]
 [ext_resource type="Texture2D" uid="uid://bl7xvubnwyniq" path="res://assets/images/curry/curry2.png" id="7_lyc6x"]
 [ext_resource type="Texture2D" uid="uid://djag3kicdimpg" path="res://assets/images/lebron/lebron2.png" id="7_nfixs"]
 [ext_resource type="Texture2D" uid="uid://cvbikrfjh22t" path="res://assets/images/curry/curry3.png" id="8_on21c"]
+[ext_resource type="Texture2D" uid="uid://nq4jtmamdgj7" path="res://assets/images/trash/bottle.png" id="8_vqvuw"]
 [ext_resource type="Texture2D" uid="uid://cv7t3w6axi4x3" path="res://assets/images/lebron/lebron3.png" id="8_wm1ih"]
 [ext_resource type="Texture2D" uid="uid://v3psw6itj88f" path="res://assets/images/curry/curry4.png" id="9_3dvn3"]
 [ext_resource type="Texture2D" uid="uid://dlwonay4cxkn0" path="res://assets/images/lebron/lebron4.png" id="9_ak0sr"]
+[ext_resource type="Texture2D" uid="uid://p685f8a7h0er" path="res://assets/images/sattelite.png" id="13_wsvjr"]
+[ext_resource type="Texture2D" uid="uid://b8b4vwjbriymm" path="res://assets/images/trash/candy.png" id="14_jcayn"]
 [ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="18_g7ckx"]
-[ext_resource type="Script" uid="uid://dlg85hp28u2pf" path="res://Scripts/debris-death.gd" id="19_ljumg"]
+[ext_resource type="Script" path="res://Scripts/debris-death.gd" id="19_ljumg"]
+[ext_resource type="Texture2D" uid="uid://c040dlhb2udxy" path="res://assets/images/trash/turt.png" id="24_3g0ce"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5flnq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3dvn3")
+}],
+"loop": true,
+"name": &"apple",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_ekawh")
@@ -41,6 +56,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_g7ckx")
+}],
+"loop": true,
+"name": &"banana",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2m7fh")
+}],
+"loop": true,
+"name": &"battery",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_vqvuw")
+}],
+"loop": true,
+"name": &"bottle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("6_ub82u")
 }, {
 "duration": 1.0,
@@ -54,6 +93,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"curry",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_wsvjr")
+}],
+"loop": true,
+"name": &"sattellite",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_jcayn")
+}],
+"loop": true,
+"name": &"shaq",
 "speed": 5.0
 }, {
 "frames": [{
@@ -97,6 +152,14 @@ animations = [{
 "loop": true,
 "name": &"trash",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_3g0ce")
+}],
+"loop": true,
+"name": &"turt",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ekawh"]
@@ -112,7 +175,7 @@ script = ExtResource("1_fmr6n")
 position = Vector2(2, -1)
 scale = Vector2(0.278, 0.278)
 sprite_frames = SubResource("SpriteFrames_5flnq")
-animation = &"stud"
+animation = &"sattellite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ekawh")
