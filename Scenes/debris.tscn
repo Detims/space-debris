@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://p685f8a7h0er" path="res://assets/images/sattelite.png" id="13_wsvjr"]
 [ext_resource type="Texture2D" uid="uid://b8b4vwjbriymm" path="res://assets/images/trash/candy.png" id="14_jcayn"]
 [ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="18_g7ckx"]
-[ext_resource type="Script" path="res://Scripts/debris-death.gd" id="19_ljumg"]
+[ext_resource type="Script" uid="uid://dlg85hp28u2pf" path="res://Scripts/debris-death.gd" id="19_ljumg"]
 [ext_resource type="Texture2D" uid="uid://c040dlhb2udxy" path="res://assets/images/trash/turt.png" id="24_3g0ce"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5flnq"]
@@ -169,6 +169,8 @@ radius = 30.0
 radius = 30.0
 
 [node name="Debris" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_fmr6n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -181,8 +183,8 @@ animation = &"sattellite"
 shape = SubResource("CircleShape2D_ekawh")
 
 [node name="Hitbox" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("19_ljumg")
 
 [node name="debris-death" type="CollisionShape2D" parent="Hitbox"]
