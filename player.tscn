@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://6f4taa6oufbw"]
+
+[ext_resource type="Script" uid="uid://30q1sqt7kqny" path="res://character_body_2d.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://dtc7n6ieycc38" path="res://assets/Spaceships/01/Spaceship_01_BLUE.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://b2eqelakt0ne7" path="res://assets/Spaceships/02/Spaceship_02_BLUE.png" id="3_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": true,
+"name": &"existing",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1jxqw"]
+radius = 35.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(599.821, 585.821)
+scale = Vector2(0.243282, 0.243282)
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+animation = &"existing"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(598.821, 588.821)
+shape = SubResource("CircleShape2D_1jxqw")

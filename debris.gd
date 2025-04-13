@@ -17,3 +17,4 @@ func _physics_process(delta: float) -> void:
 	if position.x <= boundary_left or position.x >= boundary_right:
 		move_direction *= -1
 		position.y += move_down_amount
+	
