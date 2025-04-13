@@ -1,7 +1,7 @@
 extends CharacterBody2D
-@export var move_speed: float = 50.0
-@export var move_direction: int = 1  # 1 for right, -1 for left
-@export var move_down_amount: float = 10.0
+@export var move_speed: float = 75.0
+@export var move_direction: int = [1, -1].pick_random()  # 1 for right, -1 for left
+@export var move_down_amount: float = 3.0
 @export var boundary_left: float = 0
 @export var boundary_right: float = 1024
 
