@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://whdovvsg6yx2"]
+
+[ext_resource type="Texture2D" uid="uid://cop58ikl68x5q" path="res://assets/Flame_01.png" id="1_r1bh0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1bh0"]
+size = Vector2(34, 81)
+
+[node name="Laser" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r1bh0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_r1bh0")
