@@ -11,6 +11,31 @@ extends CharacterBody2D
 var available_animations = ["apple","banana","battery","bottle","sattellite","shaq","stud", "thruster", "trash", "curry", "ball", "turt"]
 
 func _ready():
+	var type = available_animations.pick_random()
+	if type == "curry":
+		Globals.CurryDebrisDestroyed = true
+	if type == "ball":
+		Globals.BallDebrisDestroyed = true
+	if type == "thruster":
+		Globals.RocketDebrisDestroyed = true
+	if type == "stud":
+		Globals.StudDebrisDestroyed = true
+	if type == "sattellite":
+		Globals.SatelliteisDestroyed = true
+	if type == "apple":
+		Globals.AppleisDestroyed = true
+	if type == "banana":
+		Globals.BananaisDestroyed = true
+	if type == "shaq":
+		Globals.ShaqisDestroyed = true
+	if type == "bottle":
+		Globals.BottleisDestroyed = true
+	if type == "turt":
+		Globals.TurtisDestroyed = true
+	if type == "trash":
+		Globals.TrashisDestroyed = true
+	if type == "battery":
+		Globals.BatteryisDestroyed = true
 	animated_sprite.play(available_animations.pick_random())
 	
 func _on_hitbox_area_entered(area: Area2D) -> void:
