@@ -5,6 +5,13 @@ extends CharacterBody2D
 @export var boundary_left: float = 0
 @export var boundary_right: float = 1024
 
+@onready var animated_sprite = $AnimatedSprite2D
+
+var available_animations = ["stud", "thruster", "trash", "curry", "ball"]
+
+func _ready():
+	animated_sprite.play(available_animations.pick_random())
+	
 func _physics_process(delta: float) -> void:
 	# Horizontal movement
 	var velocity = Vector2(move_speed * move_direction, 0)
@@ -18,3 +25,5 @@ func _physics_process(delta: float) -> void:
 		move_direction *= -1
 		position.y += move_down_amount
 	
+	if not animated_sprite.is_playing():
+		animated_sprite.play(available_animations.pick_random())

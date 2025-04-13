@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hvkoy456jpif"
-path="res://.godot/imported/Spaceship_01_PURPLE.png-8b06fc0136af8086308ff03497c20de8.ctex"
+uid="uid://cerf64gfm7s17"
+path="res://.godot/imported/notlebron.png-4f85b34d180c8dbb407d4094ac04f8f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Spaceships/01/Spaceship_01_PURPLE.png"
-dest_files=["res://.godot/imported/Spaceship_01_PURPLE.png-8b06fc0136af8086308ff03497c20de8.ctex"]
+source_file="res://assets/Spaceships/notlebron.png"
+dest_files=["res://.godot/imported/notlebron.png-4f85b34d180c8dbb407d4094ac04f8f4.ctex"]
 
 [params]
 

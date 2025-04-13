@@ -33,7 +33,6 @@ func _process(delta: float) -> void:
 
 func spawn_debris() -> void:
 	if debris_scene == null or spawn_points.is_empty():
-		print("unlucky")
 		return
 
 	var spawn_point = spawn_points.pick_random()

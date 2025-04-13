@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c7e45ixt8qh6r" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://btkjjb5qsbtg5" path="res://assets/images/space.png" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://6f4taa6oufbw" path="res://player.tscn" id="3_epypp"]
-[ext_resource type="PackedScene" uid="uid://nhajptns1p3n" path="res://debris.tscn" id="5_kdubu"]
-[ext_resource type="Texture2D" uid="uid://b476r1gkisoil" path="res://Terrain (16x16).png" id="5_q6r6c"]
+[ext_resource type="PackedScene" uid="uid://nhajptns1p3n" path="res://Scenes/debris.tscn" id="2_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://6f4taa6oufbw" path="res://Scenes/player.tscn" id="3_epypp"]
+[ext_resource type="Texture2D" uid="uid://bobi0do8rhlq8" path="res://assets/Terrain (16x16).png" id="5_q6r6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdubu"]
 texture = ExtResource("5_q6r6c")
@@ -160,7 +160,7 @@ sources/0 = SubResource("TileSetAtlasSource_kdubu")
 
 [node name="LevelStage" type="Node2D"]
 script = ExtResource("1_0hol4")
-debris_scene = ExtResource("5_kdubu")
+debris_scene = ExtResource("2_b2bpf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(587.4, 337.5)
