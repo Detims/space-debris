@@ -1,18 +1,122 @@
-[gd_scene load_steps=3 format=3 uid="uid://csfgqkgmskgt5"]
+[gd_scene load_steps=27 format=3 uid="uid://csfgqkgmskgt5"]
 
 [ext_resource type="Script" uid="uid://5y7uyifejk4h" path="res://Scripts/gallery.gd" id="1_21use"]
 [ext_resource type="FontFile" uid="uid://dtriah10o82uu" path="res://Fonts/QuirkyRobot.ttf" id="2_e6kyq"]
+[ext_resource type="Texture2D" uid="uid://bb8qaib1kyytp" path="res://assets/images/curry/curry.png" id="3_tivr1"]
+[ext_resource type="Script" uid="uid://b5a5j4xgx6p7e" path="res://Scripts/curry.gd" id="4_fwapm"]
+[ext_resource type="Texture2D" uid="uid://ctxjbd52dxy2i" path="res://assets/images/ball/ballballball.png" id="4_vqeo1"]
+[ext_resource type="Texture2D" uid="uid://bqpe120xq2vrh" path="res://assets/images/lebron/lebron.png" id="5_c056j"]
+[ext_resource type="Script" uid="uid://b3cqsmlt6vfkv" path="res://Scripts/ball.gd" id="6_4o7ca"]
+[ext_resource type="Texture2D" uid="uid://bg7w2extsf0yc" path="res://assets/images/lego/lego1x1.png" id="6_s37o5"]
+[ext_resource type="Texture2D" uid="uid://p685f8a7h0er" path="res://assets/images/sattelite.png" id="7_om4d4"]
+[ext_resource type="Script" path="res://Scripts/thrust.gd" id="8_3dxyr"]
+[ext_resource type="Texture2D" uid="uid://bek6qkbr8roal" path="res://assets/images/trash/trash.png" id="8_kdonw"]
+[ext_resource type="Texture2D" uid="uid://cqo3bq0bn123p" path="res://assets/images/trash/apple.png" id="9_61br4"]
+[ext_resource type="Script" path="res://Scripts/lego.gd" id="10_2sofi"]
+[ext_resource type="Texture2D" uid="uid://cnyy383ov0sbd" path="res://assets/images/trash/banana.png" id="10_gtwsi"]
+[ext_resource type="Texture2D" uid="uid://ctmvrylsgrqju" path="res://assets/images/trash/bat.png" id="11_tstqc"]
+[ext_resource type="Texture2D" uid="uid://b8b4vwjbriymm" path="res://assets/images/trash/candy.png" id="12_k8t8m"]
+[ext_resource type="Script" path="res://Scripts/sattelite.gd" id="12_qfwk0"]
+[ext_resource type="Texture2D" uid="uid://c040dlhb2udxy" path="res://assets/images/trash/turt.png" id="13_fwapm"]
+[ext_resource type="Script" path="res://Scripts/trash.gd" id="14_3m3g6"]
+[ext_resource type="Texture2D" uid="uid://nq4jtmamdgj7" path="res://assets/images/trash/bottle.png" id="14_4o7ca"]
+[ext_resource type="Script" path="res://Scripts/apple.gd" id="16_bn47r"]
+[ext_resource type="Script" path="res://Scripts/banana.gd" id="18_8ddnh"]
+[ext_resource type="Script" path="res://Scripts/bat.gd" id="20_vma76"]
+[ext_resource type="Script" path="res://Scripts/candy.gd" id="22_2n30w"]
+[ext_resource type="Script" path="res://Scripts/turt.gd" id="24_6w5cy"]
+[ext_resource type="Script" path="res://Scripts/bottle.gd" id="26_5ljid"]
 
 [node name="Gallery" type="Node2D"]
 script = ExtResource("1_21use")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 32.0
-offset_top = 22.0
-offset_right = 378.0
-offset_bottom = 67.0
+offset_left = 27.0
+offset_top = 26.0
+offset_right = 373.0
+offset_bottom = 71.0
 theme_override_fonts/font = ExtResource("2_e6kyq")
 theme_override_font_sizes/font_size = 35
 text = "Back to Main Menu"
 
+[node name="curry" type="Sprite2D" parent="."]
+position = Vector2(130, 207)
+scale = Vector2(0.964, 0.964)
+texture = ExtResource("3_tivr1")
+script = ExtResource("4_fwapm")
+
+[node name="ball" type="Sprite2D" parent="."]
+position = Vector2(432, 182)
+texture = ExtResource("4_vqeo1")
+script = ExtResource("6_4o7ca")
+
+[node name="thrust" type="Sprite2D" parent="."]
+position = Vector2(676, 189)
+scale = Vector2(0.702, 0.702)
+texture = ExtResource("5_c056j")
+script = ExtResource("8_3dxyr")
+
+[node name="lego" type="Sprite2D" parent="."]
+position = Vector2(867, 186)
+scale = Vector2(0.89, 0.89)
+texture = ExtResource("6_s37o5")
+script = ExtResource("10_2sofi")
+
+[node name="sattelite" type="Sprite2D" parent="."]
+position = Vector2(199.5, 493.5)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_om4d4")
+script = ExtResource("12_qfwk0")
+
+[node name="trash" type="Sprite2D" parent="."]
+position = Vector2(1017, 307)
+scale = Vector2(0.722, 0.722)
+texture = ExtResource("8_kdonw")
+script = ExtResource("14_3m3g6")
+
+[node name="Apple" type="Sprite2D" parent="."]
+position = Vector2(462, 416)
+scale = Vector2(0.78, 0.78)
+texture = ExtResource("9_61br4")
+script = ExtResource("16_bn47r")
+
+[node name="Banana" type="Sprite2D" parent="."]
+position = Vector2(468, 490)
+scale = Vector2(0.496, 0.496)
+texture = ExtResource("10_gtwsi")
+script = ExtResource("18_8ddnh")
+
+[node name="Bat" type="Sprite2D" parent="."]
+position = Vector2(1091, 543)
+texture = ExtResource("11_tstqc")
+script = ExtResource("20_vma76")
+
+[node name="Candy" type="Sprite2D" parent="."]
+position = Vector2(606, 463)
+scale = Vector2(0.736, 0.736)
+texture = ExtResource("12_k8t8m")
+script = ExtResource("22_2n30w")
+
+[node name="Turt" type="Sprite2D" parent="."]
+position = Vector2(866, 430)
+texture = ExtResource("13_fwapm")
+script = ExtResource("24_6w5cy")
+
+[node name="Bottle" type="Sprite2D" parent="."]
+position = Vector2(854, 547)
+texture = ExtResource("14_4o7ca")
+script = ExtResource("26_5ljid")
+
+[connection signal="tree_entered" from="." to="curry" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="ball" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="thrust" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="lego" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="sattelite" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="trash" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Apple" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Banana" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Bat" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Candy" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Turt" method="_on_gallery_tree_entered"]
+[connection signal="tree_entered" from="." to="Bottle" method="_on_gallery_tree_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
