@@ -71,10 +71,17 @@ text = "= 10 points"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="StartUI/Format for Title and Button/Format for Button"]
+[node name="start_button" type="Button" parent="StartUI/Format for Title and Button/Format for Button"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ngumy")
 theme_override_font_sizes/font_size = 35
 text = "PLAY SPACE DEBRIS CLEANUP"
 
-[connection signal="pressed" from="StartUI/Format for Title and Button/Format for Button/Button" to="." method="_on_button_pressed"]
+[node name="gallery_button" type="Button" parent="StartUI/Format for Title and Button"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ngumy")
+theme_override_font_sizes/font_size = 35
+text = "Go To Gallery"
+
+[connection signal="pressed" from="StartUI/Format for Title and Button/Format for Button/start_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StartUI/Format for Title and Button/gallery_button" to="." method="_on_gallery_button_pressed"]
