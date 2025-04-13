@@ -50,3 +50,6 @@ func _physics_process(delta):
 
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	print("die")
+	Globals.PlayerisAlive = false
+	queue_free()
+	get_tree().change_scene_to_file("res://Scenes/start.tscn")
