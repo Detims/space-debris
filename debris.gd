@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var move_down_amount: float = 10.0
 @export var boundary_left: float = 0
 @export var boundary_right: float = 1024
+@export var alive = 1
 
 @onready var animated_sprite = $AnimatedSprite2D
 
