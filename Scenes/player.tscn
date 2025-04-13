@@ -18,8 +18,8 @@ animations = [{
 "speed": 4.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_1jxqw"]
-radius = 35.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6t5aa"]
+size = Vector2(78, 95)
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,5 +34,5 @@ animation = &"existing"
 frame_progress = 0.526969
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(598.821, 588.821)
-shape = SubResource("CircleShape2D_1jxqw")
+position = Vector2(595, 582.5)
+shape = SubResource("RectangleShape2D_6t5aa")
