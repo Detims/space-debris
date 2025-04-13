@@ -98,14 +98,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_biyug"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ekawh"]
+radius = 30.0
 
 [node name="Debris" type="CharacterBody2D"]
 script = ExtResource("1_fmr6n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(180.5, 180.5)
+scale = Vector2(0.278, 0.278)
 sprite_frames = SubResource("SpriteFrames_5flnq")
-animation = &"ball"
+animation = &"trash"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_biyug")
+position = Vector2(179, 170)
+shape = SubResource("CircleShape2D_ekawh")
