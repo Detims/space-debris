@@ -28,3 +28,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play(available_animations.pick_random())
 
 	move_and_slide()
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
