@@ -7,7 +7,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-var available_animations = ["stud", "thruster", "trash", "curry", "ball"]
+var available_animations = ["apple","banana","battery","bottle","sattellite","shaq","stud", "thruster", "trash", "curry", "ball", "turt"]
 
 func _ready():
 	animated_sprite.play(available_animations.pick_random())
