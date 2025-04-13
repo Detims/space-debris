@@ -47,4 +47,3 @@ func _physics_process(delta):
 	
 	# Move the character
 	position = proposed_position
-	move_and_slide()

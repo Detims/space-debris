@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://6f4taa6oufbw"]
+[gd_scene load_steps=8 format=3 uid="uid://6f4taa6oufbw"]
 
 [ext_resource type="Script" uid="uid://30q1sqt7kqny" path="res://Scripts/character_body_2d.gd" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://cerf64gfm7s17" path="res://assets/Spaceships/notlebron.png" id="2_6t5aa"]
 [ext_resource type="Texture2D" uid="uid://bqs6ikebs1h5e" path="res://assets/Spaceships/notlebron1.png" id="3_vgqql"]
+[ext_resource type="Script" uid="uid://iyxattqhruf5" path="res://Scenes/shooting.gd" id="4_vgqql"]
+[ext_resource type="PackedScene" uid="uid://whdovvsg6yx2" path="res://Scenes/laser.tscn" id="5_fkybt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
 animations = [{
@@ -23,16 +25,21 @@ size = Vector2(78, 95)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_i3pqv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(599.821, 585.821)
 scale = Vector2(0.243282, 0.243282)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"existing"
 frame_progress = 0.526969
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(595, 582.5)
 shape = SubResource("RectangleShape2D_6t5aa")
+
+[node name="ShotOrigin" type="Node2D" parent="Player"]
+position = Vector2(595, 529)
+script = ExtResource("4_vgqql")
+laser_scene = ExtResource("5_fkybt")
