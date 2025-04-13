@@ -4,7 +4,6 @@ extends CharacterBody2D
 @export var move_down_amount: float = 3.0
 @export var boundary_left: float = 0
 @export var boundary_right: float = 1024
-@export var alive = 1
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -27,5 +26,8 @@ func _physics_process(delta: float) -> void:
 	
 	if not animated_sprite.is_playing():
 		animated_sprite.play(available_animations.pick_random())
+	
+	if Globals.PlayerisAlive == false:
+		queue_free()
 	
 	move_and_slide()
