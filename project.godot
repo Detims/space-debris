@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Space Debris Shooter"
-run/main_scene="uid://v0no7ue4gsav"
+run/main_scene="uid://cxvuurwkqbq4r"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
