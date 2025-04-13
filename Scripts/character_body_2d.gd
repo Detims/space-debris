@@ -47,3 +47,6 @@ func _physics_process(delta):
 	
 	# Move the character
 	position = proposed_position
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	print("die")

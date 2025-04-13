@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://nhajptns1p3n" path="res://Scenes/debris.tscn" id="2_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://6f4taa6oufbw" path="res://Scenes/player.tscn" id="3_epypp"]
 [ext_resource type="FontFile" uid="uid://dtriah10o82uu" path="res://Fonts/QuirkyRobot.ttf" id="5_7lihs"]
-[ext_resource type="Script" uid="uid://c4p05e7bhtwlk" path="res://Scripts/goback.gd" id="6_fgofq"]
+[ext_resource type="Script" path="res://Scripts/goback.gd" id="6_fgofq"]
 
 [node name="LevelStage" type="Node2D"]
 script = ExtResource("1_0hol4")
