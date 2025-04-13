@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var move_down_amount: float = 3.0
 @export var boundary_left: float = 0
 @export var boundary_right: float = 1024
+@export var debris_alive = true
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -11,6 +12,10 @@ var available_animations = ["apple","banana","battery","bottle","sattellite","sh
 
 func _ready():
 	animated_sprite.play(available_animations.pick_random())
+	
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Laser"):
+		debris_alive = false
 	
 func _physics_process(delta: float) -> void:
 	# Horizontal movement
@@ -27,7 +32,7 @@ func _physics_process(delta: float) -> void:
 	if not animated_sprite.is_playing():
 		animated_sprite.play(available_animations.pick_random())
 	
-	if Globals.PlayerisAlive == false:
+	if debris_alive == false:
 		print("died")
 		queue_free()
 	
